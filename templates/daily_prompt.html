@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <section class="form-section">
+        <h2>Your Prompt for Today</h2>
+        <blockquote class="prompt">{{ prompt }}</blockquote>
+        <form method="POST" action="/">
+            <textarea name="gratitude_text" rows="4" placeholder="Write your reflection here..." required></textarea><br>
+            <button type="submit" class="btn">Submit Reflection</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Add Gratitude Entry Section -->
+    <section class="form-section">
+        <h2>Add a Gratitude Entry</h2>
+        <form method="POST" action="/">
+            <textarea name="gratitude_text" rows="4" placeholder="What are you grateful for today?" required></textarea><br>
+            <button type="submit" class="btn">Add Entry</button>
+        </form>
+    </section>
+
+    <!-- Display Gratitude Entries -->
+    <section class="entries-section">
+        <h2>Your Gratitude Entries</h2>
+        {% if GRATITUDE %}
+            <ul class="entry-list">
+                {% for entry in GRATITUDE %}
+                <li class="entry-item">
+                    <p><strong>Entry Time:</strong> {{ entry.entry_timestamp }}</p>
+                    <p>{{ entry.gratitude_text }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No entries yet. Start by adding one above!</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

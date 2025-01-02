@@ -1,0 +1,180 @@
+/* General Styles */
+body {
+    background-color: #f5f5f5;
+    color: #212529;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: #477bff;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header h1 a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    gap: 2rem; /* Increased spacing between navigation links */
+    justify-content: center; /* Center-align navigation links */
+    margin-top: 0.5rem; /* Add spacing above the navigation */
+}
+
+.navigation a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding: 0.5rem 0.5rem; /* Add padding around links for better spacing */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navigation a:hover {
+    color: #cce0ff; /* Light blue text color on hover */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle background effect on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+}
+
+/* Main Container */
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Sections */
+.form-section,
+.entries-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+}
+
+/* Headings */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Forms */
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #477bff;
+    box-shadow: 0 0 5px rgba(71, 123, 255, 0.5);
+}
+
+/* Buttons */
+.btn {
+    background-color: #477bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3563cc;
+}
+
+/* Entry List */
+.entry-list {
+    list-style: none;
+    padding: 0;
+}
+
+.entry-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    text-align: left;
+}
+
+.entry-item p {
+    margin: 0.5rem 0;
+}
+
+/* Quote Style for Daily Prompt */
+blockquote {
+    font-style: italic;
+    color: #555;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.flash-messages {
+    margin: 1rem auto;
+    max-width: 900px;
+    background-color: #fff4e5;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.flash-messages ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.flash-messages li {
+    margin: 0.25rem 0;
+}

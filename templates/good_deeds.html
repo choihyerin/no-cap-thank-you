@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Add a good deed -->
+    <section class="form-section">
+        <h2>Add a Good Deed</h2>
+        <form method="POST" action="/good_deeds" autocomplete="off">
+            <textarea name="deed" rows="4" placeholder="What good deed did you do today?" required></textarea><br>
+            <button type="submit" class="btn">Add Deed</button>
+        </form>
+    </section>
+
+    <!-- Display Good Deeds -->
+    <section class="entries-section">
+        <h2>Your Good Deeds</h2>
+        {% if DEEDS %}
+            <ul class="entry-list">
+                {% for deed in DEEDS %}
+                <li class="entry-item">
+                    <p><strong>Deed Time:</strong> {{ deed.timestamp }}</p>
+                    <p>{{ deed.deed }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No good deeds yet. Start by adding one above!</p>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}
